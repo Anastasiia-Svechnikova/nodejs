@@ -14,7 +14,7 @@ module.exports = app => {
   });
 
   app.get('/api/blogs', requireLogin, async (req, res) => {
-    // const redisUrl = 'redis://127.0.0.1:6379';
+
     const redis = require('redis');
     const { promisify } = require('util');
 
